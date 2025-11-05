@@ -68,4 +68,22 @@ function renderBooks(){
 
 renderBooks();
 
+const newBookButton=document.getElementById("newBookButton");
+const form=document.getElementById("bookForm");
+const dialog=document.getElementById("bookDialog");
+const close=document.getElementById("closeDialog");
+const addBook=document.getElementById("addBook");
+
+newBookButton.addEventListener("click", ()=>{
+    dialog.showModal();
+})
+addBook.addEventListener("click", (event)=>{
+    event.preventDefault();
+    dialog.close();
+    form.reset();
+})
+close.addEventListener("click", ()=>{
+    dialog.close();
+})
+
 console.log(myLibraryDom)
