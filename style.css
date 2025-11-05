@@ -1,0 +1,120 @@
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #f0f0f0;
+}
+body, body *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#bookDialog{
+    margin: auto;
+}
+input,button{
+    border: none;
+    background: none;
+    outline: none;
+}
+button:hover{
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1080px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 60px;
+    gap: 40px;
+}
+#newBookButton{
+    background-color: rgb(60, 100, 186);
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f7f7f7;
+    border-radius: 10px;
+}
+
+
+
+#bookForm{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    background-color: #f7f7f7;
+    gap: 20px;
+    position: relative;
+}
+#bookForm>div{
+    display: flex;
+    gap: 10px;
+    align-content: center;
+}
+#bookForm>div>label{
+    width: 200px;
+    text-align: right;
+    font-size: 1.4rem;
+    line-height: calc(1.4rem + 10px);
+}
+#bookForm>div>input{
+    border: 1px solid #aaaaaa;
+    width: 350px;
+    font-size: 1.3rem;
+    font-weight: normal;
+    padding: 5px;
+    text-align: left;
+}
+#addBook{
+    background-color: rgb(50, 103, 57);
+    color: #f7f7f7;
+    align-self: center;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+}
+#closeDialog{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    font-size: 1.7rem;
+}
+
+
+h1{
+    font-size: 1.8rem;
+}
+
+
+
+#myLibrary{
+    align-self: stretch;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #f7f7f7;
+    border: 1px solid #aaaaaa;
+}
+.book{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    border-bottom: 1px solid #aaaaaa;
+}
+.book:last-child{
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.book:first-child{
+    padding-top: 0;
+}
+.book-info{
+    font-size: 1.2rem;
+}
+.button-container{
+    display: flex;
+    gap: 10px;
+}
+.book-button{
+    font-size: 1.6rem;
+}

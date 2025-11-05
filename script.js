@@ -39,13 +39,15 @@ function createBook(info, id){
 
     const readButton=document.createElement("button");
     readButton.type="button";
-    readButton.textContent="read switch";
-    readButton.classList.add("read-switch")
+    readButton.innerHTML="<span class=\"mdi mdi-book-open-variant-outline\"></span>";
+    readButton.classList.add("read-switch");
+    readButton.classList.add("book-button")
 
     const deleteButton=document.createElement("button");
     deleteButton.type="button";
-    deleteButton.textContent="delete";
+    deleteButton.innerHTML="<span class=\"mdi mdi-trash-can-outline\"></span>";
     deleteButton.classList.add("delete-button");
+    deleteButton.classList.add("book-button");
 
     const buttonContainer=document.createElement("div");
     buttonContainer.classList.add("button-container");
@@ -108,8 +110,10 @@ function switchReadById(id){
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien",295, false);
 
 myLibraryDOM.addEventListener("click", (event) => {
-    if (event.target.tagName==="BUTTON"){
-        const clickedButton=event.target;
+    const btn=event.target.parentElement;
+    if (btn.tagName==="BUTTON"){
+        const clickedButton=btn;
+        console.log("clicked")
         const bookDOM=clickedButton.parentElement.parentElement;
         if (clickedButton.classList.contains("delete-button")){
             removeBookFromlibrary(bookDOM.getAttribute("data-id"));
